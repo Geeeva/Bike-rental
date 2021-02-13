@@ -2,6 +2,9 @@ import {Component} from "react";
 import MainMenu from './MainMenu';
 import {Container} from 'react-bootstrap';
 import {NavLink} from "react-router-dom";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { loggInUser, logout } from "../../_actions/actions";
 
 class Header extends Component {
     state = {
@@ -35,6 +38,12 @@ class Header extends Component {
             );
         }
     }
+
+    handleLogout = () => {
+        localStorage.clear();
+        this.props.logout();
+    }
+
     render(){
         return (
             <header className="header">
@@ -55,7 +64,7 @@ class Header extends Component {
                                 <a href="#" className="header-user"><i className="fa fa-user dropdown" aria-hidden="true" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}></i></a>
                                 <ul>
                                     <NavLink className="home" to="/login" exact ><li>Login/Register</li></NavLink>
-                                    <NavLink className="home" to="/login" exact ><li>Logout</li></NavLink>
+                                    <NavLink className="home" onClick={this.handleLogout} to="/login" exact ><li>Logout</li></NavLink>
                                 </ul>
                             </li>
                             <li><a className="header-cart" href="#"><i className="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
@@ -69,5 +78,20 @@ class Header extends Component {
     }
 
 }
+function mapStateToProps(state) {
+    const { loggedIn, user } = state.authentication;
+    return {
+        loggedIn,
+        user,
+    };
+}
 
-export default Header;
+const mapDispatchToProps = (dispatch) =>
+    bindActionCreators(
+        {
+            loggInUser,
+            logout,
+        },
+        dispatch
+);
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
