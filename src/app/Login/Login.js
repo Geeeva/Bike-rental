@@ -27,6 +27,8 @@ class Login extends Component {
   }
 
   onReg = (e) => {
+    e.preventDefault();
+
     if (this.validate()) {
       // stanja za registraciju
       let { firstname, username, password, email } = this.state;
@@ -72,7 +74,6 @@ class Login extends Component {
             console.log("greska");
             alert(server_data.msg);
           } else {
-            //uspjesna prijava imamo token
             localStorage.setItem("MOJ_TOKEN", server_data.idToken);
 
             if (server_data.isAdmin1) {
