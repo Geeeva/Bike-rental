@@ -2,9 +2,9 @@ import {Component} from "react";
 import MainMenu from './MainMenu';
 import {Container} from 'react-bootstrap';
 import {NavLink} from "react-router-dom";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import { loggInUser, logout } from "../../_actions/actions";
+import {connect} from "react-redux";
+import {bindActionCreators} from "redux";
+import {loggInUser, logout} from "../../_actions/actions";
 
 class Header extends Component {
     state = {
@@ -54,22 +54,22 @@ class Header extends Component {
                 </div>
                 <div className="top-panel">
                     <Container>
-                    <div className="top-panel-cover">
-                        <ul className="header-cont">
-                            <li><a href="tel:+38267214468"><i className="fa fa-phone"></i>+382 67 214 468</a></li>
-                            <li><a href="mailto:bikerentalo@gmail.com"><i className="fa fa-envelope" aria-hidden="true"></i>bikerental@gmail.com</a></li>
-                        </ul>
-                        <ul className="nav-list">
-                            <li className={"dropdown" + (this.state.isHovered ? " active" : "")}>
-                                <a href="#" className="header-user"><i className="fa fa-user dropdown" aria-hidden="true" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}></i></a>
-                                <ul>
-                                    <NavLink className="home" to="/login" exact ><li>Login/Register</li></NavLink>
-                                    <NavLink className="home" onClick={this.handleLogout} to="/login" exact ><li>Logout</li></NavLink>
-                                </ul>
-                            </li>
-                            <li><a className="header-cart" href="#"><i className="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </div>
+                        <div className="top-panel-cover">
+                            <ul className="header-cont">
+                                <li><a href="tel:+38267214468"><i className="fa fa-phone"></i>+382 67 214 468</a></li>
+                                <li><a href="mailto:bikerentalo@gmail.com"><i className="fa fa-envelope" aria-hidden="true"></i>bikerental@gmail.com</a></li>
+                            </ul>
+                            <ul className="nav-list">
+                                <li className={"dropdown" + (this.state.isHovered ? " active" : "")}>
+                                    <a href="#" className="header-user"><i className="fa fa-user dropdown" aria-hidden="true" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}></i></a>
+                                    <ul>
+                                        <NavLink className="home" to="/login" exact ><li>Login/Register</li></NavLink>
+                                        <NavLink className="home" onClick={this.handleLogout} to="/login" exact ><li>Logout</li></NavLink>
+                                    </ul>
+                                </li>
+                                <li><a className="header-cart" href="#"><i className="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
                     </Container>
                 </div>
                 <MainMenu isOpenedNavbar={this.state.isOpenedNavbar}/>

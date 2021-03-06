@@ -1,0 +1,17 @@
+[     {
+        "_id": 1,
+        "name": "mountain bike"
+      },
+      {
+        "_id": 2,
+        "name": "touring bike"
+      },
+      {
+        "_id": 3,
+        "name": "electric bike"
+      },
+      {
+        "_id": 4,
+        "name": "road bike"
+      }
+]

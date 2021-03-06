@@ -1,19 +1,19 @@
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './app/App';
-//import userReducer from './store/userReducer'
-import {authentication} from './store/authentication.reducer'
-import reportWebVitals from './reportWebVitals';
-import {combineReducers, createStore} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
+import {createBrowserHistory} from 'history';
+import thunk from 'redux-thunk'
+import {routerMiddleware, ConnectedRouter} from 'connected-react-router';
+import{composeWithDevTools} from 'redux-devtools-extension';
 import {Provider} from 'react-redux';
 
-const rootReducer = combineReducers({
-    authentication: authentication,
-})
-const store = createStore(rootReducer);
-ReactDOM.render(<Provider  store={store}><App/></Provider>, document.getElementById('root'));
+import App from './app/App';
+import createRootReducer from "./store/reducers";
+const history = createBrowserHistory();
+const middlewares = [thunk, routerMiddleware(history)];
 
+const store = createStore(
+    createRootReducer(history),
+    composeWithDevTools(applyMiddleware(...middlewares))
+);
 
-
-
-reportWebVitals();
+ReactDOM.render(<Provider  store={store}><ConnectedRouter history={history}><App/></ConnectedRouter></Provider>, document.getElementById('root'));

@@ -1,6 +1,12 @@
-const initialState = { loggedIn: false, user : '', userType: 0};
+//import basketReducer from "./basket.reducers";
 
-export function authentication(state = initialState, action){
+const initialState = {
+    loggedIn: false,
+    user : '',
+    userType: 0
+};
+
+const authenticationReducers = (state = initialState, action) => {
     switch (action.type) {
         case 'USER_LOGIN':
             return {loggedIn: true, user: action.user, userType: action.userType};
@@ -10,3 +16,5 @@ export function authentication(state = initialState, action){
             return state;
     }
 }
+
+export default authenticationReducers;

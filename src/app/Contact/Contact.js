@@ -190,8 +190,6 @@ class Contact extends Component {
                 type="button"
                 className="btn"
                 onClick={this.onComment}
-
-
               >
                 <span className="btn-txt">submit comment</span>
               </button>

@@ -9,6 +9,9 @@ import Admin from './Admin/Admin';
 import Contact from './Contact/Contact';
 import Login from './Login/Login';
 import NotFound from './NotFound/NotFound';
+import SingleProduct from './BikeRental/Products/SingleProduct/SingleProduct';
+import Basket from './Basket/Basket';
+import Checkout from './Checkout/Checkout.js';
 import '../assets/sass/style.scss';
 
 class App extends Component {
@@ -27,13 +30,17 @@ class App extends Component {
                 <Router>
                     <Header />
                     <Switch>
-                        <Route className="home-route" path="/" exact strict component={Home}/>
-                        <Route className="bike-rental-route" path="/bike-rental" exact strict component={BikeRental}/>
-                        <Route className="about-route" path="/about" exact strict component={About}/>
-                        <Route className="admin-route" path="/admin" exact strict component={Admin}/>
-                        <Route className="contact-route" path="/contact" exact strict component={Contact}/>
-                        <Route className="contact-route" path="/login" exact strict component={Login}/>
-                        <Route className="not-found" component={NotFound} />
+                        <Route  path="/" exact strict component={Home}/>
+                        <Route path="/bike-rental" exact strict component={BikeRental}/>
+                        <Route path="/about" exact strict component={About}/>
+                        <Route  path="/admin" exact strict component={Admin}/>
+                        <Route path="/contact" exact strict component={Contact}/>
+                        <Route path="/login" exact strict component={Login}/>
+                        <Route path="/categories/:id" exact strict component={BikeRental}/>
+                        <Route path="/single-product/:id" exact strict component={SingleProduct}/>
+                        <Route path="/basket" exact strict component={Basket}/>
+                        <Route path="/checkout" exact strict component={Checkout}/>
+                        <Route component={NotFound} />
                     </Switch>
                     <Footer />
                 </Router>

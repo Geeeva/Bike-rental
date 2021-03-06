@@ -815,7 +815,7 @@ body.no-scroll{
     justify-content: center;
     align-items: center;
     height: 100vh;
-
+	margin-top: 140px;
     &_genForm{
         display: flex;
         flex-direction: column;
@@ -1529,7 +1529,255 @@ footer {
     font-weight: 700;
 }
 
+//Added code
+//Header
+.header{
+	position: fixed;
+	top: 0;
+}
+.btn:before {
+	content: ''!important;
+	position: absolute;
+	width: 0;
+	height: 100%;
+	top: 0;
+	left: 0!important;
+	-webkit-transition: .35s ease;
+	transition: .35s ease;
+	background-color: #ffd910;
+	-webkit-transform: translate(-100%, 0) skew(
+									25deg
+	);
+	transform: translate(-100%, 0) skew(
+									25deg
+	);
+	cursor: pointer;
+}
+.btn span{
+	cursor: pointer;
+}
+.img-fluid {
+	max-width: 100%;
+	height: auto;
+}
+.s-single-product label{
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+.amounts{
+	font-size: 12px;
+	font-weight: 600;
+	position: absolute;
+	background-color: #ffd910;
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+	color: #192330;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	right: -8px;
+	top: -5px;
+}
 
+.basket-count, .basket-price{
+	font-weight: 600;
+	color: #192330;
+}
+.categories{
+	padding-left: 22px;
+	margin-bottom: 8px;
+	span{
+		text-transform: capitalize;
+
+	}
+}
+
+.categories.active span{
+	color: #ffd910;
+}
+
+.img-thumbnail {
+	padding: 4px;
+	line-height: 1.42857143;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	display: inline-block;
+	max-width: 100px;
+	height: auto;
+}
+
+.table-bordered .row{
+	margin-bottom: 15px;
+}
+.table-bordered .table-heading .row:first-child{
+	font-size: 16px;
+
+}
+
+.table-bordered .col-md-2, .table-bordered .col-md-4{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.fa-trash{
+	color: #192330;
+}
+
+.table-responsive{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.container-fluid{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+//Basket
+.continue{
+	font-weight: 600;
+	margin-bottom: 50px;
+	text-decoration: underline;
+}
+.to-basket {
+	font-weight: 600;
+	margin-bottom: 50px;
+	text-decoration: underline;
+}
+.empty{
+	padding-top: 150px;
+	padding-bottom: 50px;
+}
+.basket-count{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.caption{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: #192330;
+	margin-bottom: 30px;
+	display: flex;
+	align-items: center;
+	h5{
+		padding-top: 0;
+		color: #fff;
+	}
+}
+.overtaking{
+	margin-top: 15px;
+}
+.table-bottom{
+	margin-top: 50px;
+}
+.total-table .btn{
+	margin-top: 30px;
+	float: right;
+}
+.checkout{
+	margin-top: 140px;
+	padding-top: 70px;
+	padding-bottom: 50px;
+}
+.checkout-form-caption{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: #192330;
+	margin-bottom: 30px;
+	display: flex;
+	align-items: center;
+	h5{
+		color: #fff;
+	}
+}
+.notification-error{
+	margin-bottom: 30px;
+}
+button[disabled] span{
+	cursor: not-allowed;
+}
+.category-name{
+	text-transform: capitalize;
+}
+.checkout-total-caption{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: #192330;
+	margin-bottom: 30px;
+	display: flex;
+	align-items: center;
+	h5{
+		color: #fff;
+	}
+}
+.checkout-total-details{
+	color: #192330;
+	margin-bottom: 15px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ebedec;
+}
+.s-header-title {
+	margin-top: 140px;
+}
+.total-table{
+	border-top: 1px solid #ebedec;
+	padding-top: 20px;
+}
+.total-products{
+	display: flex;
+	align-items: center;
+}
+.clean-basket{
+	margin-top: 30px;
+}
+.single-quanity input{
+	background-color: transparent;
+	border-radius: 0;
+	border: 2px solid #dbdbdb;
+	transition: .35s ease;
+	color: #9ca4ab;
+	font-size: 16px;
+	width: 100%;
+	max-width: 100px;
+	padding: 10px 20px 10px 20px;
+	font-weight: 700;
+}
+input[type=number]::-webkit-inner-spin-button, .no-spin::-webkit-outer-spin-button {
+	-webkit-appearance: none !important;
+	moz-appearance: textfield;
+}
+input[type=number] {
+	-moz-appearance:textfield !important;
+}
+.single-quanity span{
+	cursor: pointer;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 20px;
+}
+.single-quanity input{
+	color: #535b65;
+}
+.fa-trash{
+	cursor: pointer;
+}
+.team-item img{
+	height: 750px!important;
+}
+.our-advantages-item {
+	width: calc(33% - 22px) !important;
+}
+.advantages{
+	width: 100%;
+}
+.bike-rental-wrapper{
+	margin-top: 50px;
+}
 
 
 

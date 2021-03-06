@@ -1,7 +1,7 @@
 import {Component} from 'react';
 import {Container} from 'react-bootstrap';
 import {connect} from 'react-redux';
-import {NavLink} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import Logo from '../../assets/images/logo/logo.jpg';
 
 class MainMenu extends Component {
@@ -9,14 +9,14 @@ class MainMenu extends Component {
         return (
             <div className="header-menu">
                 <Container>
-                    <NavLink className="logo" to="/" exact><img src={Logo} alt="logo-car-rental"/></NavLink>
+                    <Link className="logo" to="/" exact><img src={Logo} alt="logo-car-rental"/></Link>
                     <nav className={"nav-menu" + (this.props.isOpenedNavbar ? " active" : "")}>
                         <ul className="nav-list">
-                            <NavLink className="home" to="/" exact activeStyle={{color: '#000000'}}><li>Home</li></NavLink>
-                            <NavLink className="bike-rental" to="/bike-rental" exact activeStyle={{color: '#000000'}}><li>Bike Rental</li></NavLink>
-                            <NavLink className="about" to="/about" exact activeStyle={{color: '#000000'}}><li>About</li></NavLink>
-                            <NavLink style={{display: this.props.userType === 0 ? "none" : "inline-block"}} to="/admin" exact activeStyle={{color: '#000000'}} ><li>Admin</li></NavLink>
-                            <NavLink className="contact" to="/contact" exact activeStyle={{color: '#000000'}}><li>Contact</li></NavLink>
+                            <Link className="home" to="/" exact><li>Home</li></Link>
+                            <Link className="bike-rental" to="/bike-rental" exact><li>Bike Rental</li></Link>
+                            <Link className="about" to="/about" exact ><li>About</li></Link>
+                            <Link style={{display: this.props.userType === 0 ? "none" : "inline-block"}} to="/admin" exact><li>Admin</li></Link>
+                            <Link className="contact" to="/contact" exact><li>Contact</li></Link>
                         </ul>
                     </nav>
                 </Container>
