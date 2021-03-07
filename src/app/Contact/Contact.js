@@ -4,24 +4,49 @@ import cont1 from "../../assets/images/cont1.svg";
 import cont2 from "../../assets/images/cont2.svg";
 import cont3 from "../../assets/images/cont3.svg";
 import HeaderTitle from "../components/HeaderTitle";
+import {
+  withScriptjs,
+  withGoogleMap,
+  GoogleMap,
+  Marker,
+} from "react-google-maps";
+
 class Contact extends Component {
+  static defaultProps = {
+    googleMapURL:
+      "https://maps.googleapis.com/maps/api/js?key=AIzaSyDPjKxbCPzsNavhfOcul7XkYMtwc9mRQ0g",
+  };
+
   constructor(props) {
     super(props);
     this.state = {
       title: "Contact",
-      name:"",
-      email:"",
-      phone:"",
-      message:""
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
     };
   }
-  onComment = (e) =>{
+
+  onComment = (e) => {
     e.preventDefault();
     console.log("komentar");
-  }
+  };
+
+  CMap = withScriptjs(
+    withGoogleMap((props) => (
+      <GoogleMap
+        defaultZoom={8}
+        defaultCenter={{ lat: 42.4417391, lng: 19.261290886455612 }}
+      >
+        {props.children}
+      </GoogleMap>
+    ))
+  );
+
   render() {
     return (
-      <div>
+      <div style={{ paddingTop: 0}}>
         <HeaderTitle title={this.state.title}></HeaderTitle>
         <section className="contacts-top">
           <div className="container">
@@ -83,10 +108,8 @@ class Contact extends Component {
                   <div className="contact-block-right">
                     <ul>
                       <li>
-                        <a href="tel:068-000-000">068-000-000</a>
-                      </li>
-                      <li>
-                        <a href="tel:068-000-000">068-000-000</a>
+                        <a href="tel:+382 67 214 468"> +382 67 214 468
+                        </a>
                       </li>
                     </ul>
                   </div>
@@ -101,10 +124,7 @@ class Contact extends Component {
                   <div className="contact-block-right">
                     <ul>
                       <li>
-                        <a href="mailto:team@gmail.com">team@gmail.com</a>
-                      </li>
-                      <li>
-                        <a href="mailto:help@gmail.com">help@gmail.com</a>
+                        <a href="bikerental@gmail.com">bikerental@gmail.com</a>
                       </li>
                     </ul>
                   </div>
@@ -120,7 +140,7 @@ class Contact extends Component {
                     <ul>
                       <li>
                         <a className="item-scroll" href="#map">
-                          8500, Lorem Street, Chicago, IL, 55030
+                          Delta City, Podgorica
                         </a>
                       </li>
                     </ul>
@@ -194,11 +214,19 @@ class Contact extends Component {
                 <span className="btn-txt">submit comment</span>
               </button>
             </div>
-            
+
             <div id="message"></div>
           </div>
         </section>
- 
+        <this.CMap
+          googleMapURL={this.props.googleMapURL}
+          loadingElement={<div style={{ height: `100%` }} />}
+          containerElement={<div style={{ height: `700px` }} />}
+          mapElement={<div style={{ height: `100%` }} />}
+          center={{ lat: 25.03, lng: 121.6 }}
+        >
+          <Marker position={{ lat: 42.4371789, lng: 19.23580635304705 }} />
+        </this.CMap>
       </div>
     );
   }

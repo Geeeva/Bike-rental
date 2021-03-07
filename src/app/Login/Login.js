@@ -228,7 +228,7 @@ class Login extends Component {
           <div className="btn-cont">
             <button
               type="button"
-              className="btn btn-form"
+              className="dugme btn-form"
               onClick={this.onReg}
             >
               <span className="btn-txt"> Sing up </span>
@@ -286,7 +286,7 @@ class Login extends Component {
           <div className="btn-cont">
             <button
               type="button"
-              className="btn btn-form"
+              className="dugme btn-form"
               onClick={this.onSubmit}
             >
               <span className="btn-txt"> Log in </span>
@@ -339,7 +339,7 @@ class Login extends Component {
             </div>
           </div>
           <div className="btn-cont">
-            <button type="button" className="btn btn-form">
+            <button type="button" className="dugme btn-form">
               <span className="btn-txt">Send</span>
             </button>
           </div>

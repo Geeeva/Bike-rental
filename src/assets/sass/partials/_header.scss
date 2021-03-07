@@ -1777,6 +1777,51 @@ input[type=number] {
 	margin-top: 50px;
 }
 
+.dugme{
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	display: inline-block;
+	background-color: transparent;
+	padding: 12px 32px 10px;
+	font-weight: 700;
+	-webkit-transition: .35s ease;
+	transition: .35s ease;
+	color: #192330;
+	min-width: 140px;
+	border: 2px solid #ffd910;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border-radius: 0;
+	font-size: 16px;
+	letter-spacing: 0.1em;
+	font-family: "Roboto Condensed",sans-serif;
+	overflow: hidden;
+	position: relative;
+	padding: 0px 30px;
+	height: 50px;
+	
+
+	&:hover {
+		color: #192330;
+		&::before {
+			width: 130% !important;
+		}
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 100%;
+		top: 0;
+		left: 50%;
+		-webkit-transition: .35s ease;
+		transition: .35s ease;
+		background-color: #ffd910;
+		-webkit-transform: translate(-50%, 0) skew(25deg);
+		transform: translate(-50%, 0) skew(25deg) !important;
+	}  
+}
 
 
 
