@@ -159,6 +159,7 @@ header {
 }
 .nav-list>a{
 	position: relative;
+	text-decoration:none;
 	>li{
 		font-size:14px;
 		text-decoration:none;
@@ -914,8 +915,7 @@ content: '\f0e0';
         text-align: center;
 
         .link-txt{
-            color:#f7aa06;
-
+            color: #ffd910;
             &:hover{
                 text-decoration: underline;
                 text-decoration-color: #f7aa06;
@@ -923,8 +923,6 @@ content: '\f0e0';
             }
         }
       }
-
-    
 }
 .btn-cont  {
 	button{

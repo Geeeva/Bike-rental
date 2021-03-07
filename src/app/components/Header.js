@@ -1,10 +1,11 @@
 import {Component} from "react";
 import MainMenu from './MainMenu';
 import {Container} from 'react-bootstrap';
-import {NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 import {connect} from "react-redux";
 import {bindActionCreators} from "redux";
 import {loggInUser, logout} from "../../_actions/actions";
+import {getTotalBasketCount} from "../../store/selectors";
 
 class Header extends Component {
     state = {
@@ -45,6 +46,8 @@ class Header extends Component {
     }
 
     render(){
+        const {loggedIn, user, totalBasketCount} = this.props;
+        console.log(totalBasketCount)
         return (
             <header className="header">
                 <div className={"nav-btn" + (this.state.isOpenedNavbar? " active" : "")} onClick ={this.handleNavbarMobToggle}>
@@ -63,11 +66,11 @@ class Header extends Component {
                                 <li className={"dropdown" + (this.state.isHovered ? " active" : "")}>
                                     <a href="#" className="header-user"><i className="fa fa-user dropdown" aria-hidden="true" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}></i></a>
                                     <ul>
-                                        <NavLink className="home" to="/login" exact ><li>Login/Register</li></NavLink>
-                                        <NavLink className="home" onClick={this.handleLogout} to="/login" exact ><li>Logout</li></NavLink>
+                                        <Link className="home" to="/login" exact ><li>Login/Register</li></Link>
+                                        <Link className="home" onClick={this.handleLogout} to="/login" exact ><li>Logout</li></Link>
                                     </ul>
                                 </li>
-                                <li><a className="header-cart" href="#"><i className="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                                <li><Link to="/basket"><i className="fa fa-shopping-cart"><span className="amounts">{totalBasketCount}</span></i></Link></li>
                             </ul>
                         </div>
                     </Container>
@@ -76,15 +79,12 @@ class Header extends Component {
             </header>
         );
     }
-
 }
-function mapStateToProps(state) {
-    const { loggedIn, user } = state.authentication;
-    return {
-        loggedIn,
-        user,
-    };
-}
+const mapStateToProps = state => ({
+    loggedIn: state.authentication.loggedIn,
+    user: state.authentication.user,
+    totalBasketCount: getTotalBasketCount(state)
+})
 
 const mapDispatchToProps = (dispatch) =>
     bindActionCreators(
