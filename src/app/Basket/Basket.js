@@ -31,7 +31,6 @@ class Basket extends Component {
                                     <div className="col-md-2">Total per product</div>
                                     <div className="col-md-2">Delete Product</div>
                                 </Row>
-        {console.log(products)}
                             {products.map((product, index) => (
                                 <Row
                                     key={index}
@@ -46,8 +45,8 @@ class Basket extends Component {
                                     </div>
                                     <div className="col-md-2"><Link to={'single-product/' + product._id}>{product.product_name}</Link></div>
                                     <div className="col-md-2">{product.full_day_rent}€</div>
-                                    <div className="col-md-2">{product.quantity}</div>
-                                    <div className="col-md-2">{product.full_day_rent * product.quantity}</div>
+                                    <div className="col-md-2">{product.days_to_rent}</div>
+                                    <div className="col-md-2">{product.full_day_rent * product.days_to_rent}</div>
                                     <div className="col-md-2">
                                         <span onClick={() => {removeProductFromBasket(product._id)}}><i className="fa fa-trash"></i></span>
                                     </div>

@@ -6,6 +6,7 @@ export const getTotalBasketCount = state => {
 }
 
 export const getTotalBasketPrice = state =>{
+    /***Added array with products full data***/
     const addedProducts = state.basket.basketIds.map(
         productId => {
             const foundProduct = state.products.products.find(product =>
@@ -15,9 +16,9 @@ export const getTotalBasketPrice = state =>{
             return foundProduct;
         }
     )
-    console.log(addedProducts);
+    console.log( "dodati proizvodi" +addedProducts);
     const basketPrices = addedProducts.map(
-        product => product.full_day_rent * product.quantity
+        product => product.full_day_rent * product.days_to_rent
     )
     const totalBasketPrice = basketPrices.reduce((a, b) => a + b, 0);
 
@@ -65,11 +66,16 @@ export const getBasketProductsWithCount = state => {
             for(let item of state.basket.basketIds){
                 if(Number(item.id) === Number(product._id)){
                     const productWithDaysToRent = Object.assign(product, {days_to_rent: item['days_to_rent']});
+                    console.log(item);
                     return BasketArray.push(productWithDaysToRent)
                 }
             }
         }
     )
+
+    BasketArray.forEach(item => {
+        console.log(item)
+    })
 
     return BasketArray
 }

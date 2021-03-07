@@ -17,7 +17,7 @@
         "category": "mountain bike",
         "manufacturer": "X-Caliber",
         "number_of_speeds": 7,
-        "quantity": 3,
+        "quantity": 1,
         "full_day_rent": 18,
         "full_week_rent": 90.00,
         "booked": false,

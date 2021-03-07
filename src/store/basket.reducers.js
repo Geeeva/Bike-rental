@@ -7,19 +7,28 @@ const initialState = {
 };
 
 const basketReducer = (state = initialState, action) => {
+    console.log("sa vrha redcure" + state.basketDaysQuantity)
     switch(action.type) {
         case ADD_PRODUCT_TO_BASKET:
             const newIds = state.basketIds.concat({id: action.payload, days_to_rent: state.basketDaysQuantity});
             let uniqueIds = [];
+
             newIds.filter(item => {
                 let i = uniqueIds.findIndex(x => x.id === item.id);
                     if(i <= -1){
-                        uniqueIds.push({id: item.id, days_to_rent: 1})
+                        uniqueIds.push(item);
                     }
             })
+            uniqueIds.forEach(item =>
+                {if(item.id === action.payload){
+                    item.days_to_rent = state.basketDaysQuantity;
+                }}
+            )
+            console.log("iz reducera" + newIds[0].days_to_rent)
             return {
                 ...state,
-                basketIds: uniqueIds
+                basketIds: uniqueIds,
+                basketDaysQuantity: 1
             }
         case REMOVE_PRODUCT_FROM_BASKET:
             const filteredBasketIds = state.basketIds.filter(id => Number(id.id) !== Number(action.payload));
@@ -53,14 +62,16 @@ const basketReducer = (state = initialState, action) => {
                 basketDaysQuantity: state.basketDaysQuantity
             }
         case ON_QUANTITY_CHANGE:
+            let counter;
             if(action.payload <= 0){
-                state.basketDaysQuantity = 1
+                counter = 1;
             } else {
-                state.basketDaysQuantity = action.payload
+                counter = action.payload
             }
+            console.log("iz reducera counter" + counter)
             return {
                 ...state,
-                basketDaysQuantity: state.basketDaysQuantity
+                basketDaysQuantity: counter
             }
         default:
             return {

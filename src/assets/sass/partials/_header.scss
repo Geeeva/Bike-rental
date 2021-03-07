@@ -1823,6 +1823,24 @@ input[type=number] {
 	}  
 }
 
+.feedback-content{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.swiper-button-next, .swiper-button-prev{
+	color: #ffd910;
+}
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet{
+	color: #ffd910;
+}
+.main-soc-list li a{
+	color: #fff!important;
+	text-decoration: none;
+}
+.table-responsive{
+	overflow: unset!important;
+}
+
 
 
 
