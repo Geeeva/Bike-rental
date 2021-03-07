@@ -1747,7 +1747,7 @@ button[disabled] span{
 }
 input[type=number]::-webkit-inner-spin-button, .no-spin::-webkit-outer-spin-button {
 	-webkit-appearance: none !important;
-	moz-appearance: textfield;
+	-moz-appearance: textfield;
 }
 input[type=number] {
 	-moz-appearance:textfield !important;

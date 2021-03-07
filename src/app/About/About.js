@@ -6,6 +6,8 @@ import Jelena from "../../assets/images/about/jelena.jpg";
 import Card from "../../assets/images/about/card.svg"
 import Warranty from "../../assets/images/about/warranty.svg"
 import Discount from "../../assets/images/about/discount.svg"
+import FeedbackSlider from "../components/FeedbackSlider";
+
 const About = () => {
     return (
         <>
@@ -51,6 +53,16 @@ const About = () => {
 
             </div>
             </div>
+            </section>
+            <section className="sek s-feedback">
+                <span className="effwct-bg-feedback"></span>
+                <span className="mask"></span>
+                <div className="container">
+                    <h2 class="title">feedback</h2>
+                    <div className="main-slider" style={{ height: 500 }}>
+                    <FeedbackSlider></FeedbackSlider>
+                    </div>
+                </div>
             </section>
             <section className="s-our-team">
                 <div className="container">
