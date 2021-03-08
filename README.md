@@ -28,7 +28,7 @@ the possibility to pay with cards or just to choose pick up option. By hitting b
 
 #Steps to run this project:
 
-- **git clone https://github.com/Geeeva/bike-rental.git**
+- **git clone https://github.com/Geeeva/Bike-rental.git**
 - **cd bike-rental**
 - **npm install**
 - **npm start**
