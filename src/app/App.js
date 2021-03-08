@@ -27,7 +27,7 @@ class App extends Component {
     render () {
         return (
             <>
-                <Router>
+                <Router basename="/bike-rental/">
                     <Header />
                     <Switch>
                         <Route  path="/" exact strict component={Home}/>

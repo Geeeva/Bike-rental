@@ -1,8 +1,4 @@
 import React, { Component } from "react";
-import feedback1 from "../../assets/images/feedback-photo-1.png";
-import health from "../../assets/images/health.jpg";
-import health1 from "../../assets/images/health1.jpg";
-import health2 from "../../assets/images/health2.jpg";
 import client1 from "../../assets/images/client1.svg";
 import client2 from "../../assets/images/client2.svg";
 import client3 from "../../assets/images/client3.svg";
@@ -84,31 +80,7 @@ export default class Home extends Component {
         <section class="s-clients client">
           <div class="container">
             <div class="clients-cover">
-              <div class="client-slide">
-                <div class="client-slide-cover">
-                  <img src={client1} alt="img" />
-                </div>
-              </div>
-              <div class="client-slide">
-                <div class="client-slide-cover">
-                  <img src={client2} alt="img" />
-                </div>
-              </div>
-              <div class="client-slide">
-                <div class="client-slide-cover">
-                  <img src={client3} alt="img" />
-                </div>
-              </div>
-              <div class="client-slide">
-                <div class="client-slide-cover">
-                  <img src={client4} alt="img" />
-                </div>
-              </div>
-              <div class="client-slide">
-                <div class="client-slide-cover">
-                  <img src={client5} alt="img" />
-                </div>
-              </div>
+
             </div>
           </div>
         </section>
@@ -136,18 +108,8 @@ export default class Home extends Component {
                     </a>
                   </li>
                   <li>
-                    <a target="_blank" href="https://twitter.com">
-                      <i className="fa fa-twitter" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li>
                     <a target="_blank" href="https://www.instagram.com">
                       <i className="fa fa-instagram" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a target="_blank" href="https://www.youtube.com">
-                      <i className="fa fa-youtube-play" aria-hidden="true"></i>
                     </a>
                   </li>
                 </ul>

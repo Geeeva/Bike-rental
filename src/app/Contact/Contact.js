@@ -36,7 +36,7 @@ class Contact extends Component {
   CMap = withScriptjs(
     withGoogleMap((props) => (
       <GoogleMap
-        defaultZoom={8}
+        defaultZoom={15}
         defaultCenter={{ lat: 42.4417391, lng: 19.261290886455612 }}
       >
         {props.children}
@@ -76,18 +76,8 @@ class Contact extends Component {
                     </a>
                   </li>
                   <li>
-                    <a target="_blank" href="https://twitter.com">
-                      <i className="fa fa-twitter" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li>
                     <a target="_blank" href="https://www.instagram.com">
                       <i className="fa fa-instagram" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a target="_blank" href="https://www.youtube.com">
-                      <i className="fa fa-youtube-play" aria-hidden="true"></i>
                     </a>
                   </li>
                 </ul>
