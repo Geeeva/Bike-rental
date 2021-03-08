@@ -21,9 +21,9 @@ By hitting the button "ADD" you will ads that bike and entered days to basket.
 Than you can go to basket in header menu. When entering the basket it is shown list of products added to cart with their total for rent.
 You have possibility to delete item per item here, and also by clicking the links of the item to re-enter to single page of it 
 and to modify it's quantity to rent.
-When we confirm hit button you are going to checkout page, with form to enter clients data and details to rent - pick up date.
+When we hit "CONFIRM" hit button we are going to checkout page, with form to enter clients data and details to rent - pick up date.
 Validation it has been added, and therefore all * fields must be filled in. When clicking continue to payment you will have
-the possibility to pay with cards or just to choose pick up option. By hitting buy you will finish the process to rent the bike in the shop.
+the possibility to pay with cards or just to choose pick up option. By hitting "BUY" you will finish the process to rent the bike in the shop.
 
 
 #Steps to run this project:
