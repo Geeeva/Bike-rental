@@ -24,19 +24,15 @@ class Header extends Component {
     }
     handleHover = () => {
         if(this.state.isHovered === false){
-            setTimeout(
-                () => this.setState(prevState => ({
-                    isHovered: !prevState.isHovered
-                })),
-                2000
-            );
+            this.setState(prevState => ({
+                isHovered: !prevState.isHovered
+            }));
+
         } else{
-            setTimeout(
-                () => this.setState(prevState => ({
-                    isHovered: !prevState.isHovered
-                })),
-                2000
-            );
+            this.setState(prevState => ({
+                isHovered: !prevState.isHovered
+            }))
+
         }
     }
 
@@ -63,8 +59,8 @@ class Header extends Component {
                                 <li><a href="mailto:bikerentalo@gmail.com"><i className="fa fa-envelope" aria-hidden="true"></i>bikerental@gmail.com</a></li>
                             </ul>
                             <ul className="nav-list">
-                                <li className={"dropdown" + (this.state.isHovered ? " active" : "")}>
-                                    <a href="#" className="header-user"><i className="fa fa-user dropdown" aria-hidden="true" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}></i></a>
+                                <li className={"dropdown" + (this.state.isHovered ? " active" : "")} onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
+                                    <a href="#" className="header-user"><i className="fa fa-user dropdown" aria-hidden="true" ></i></a>
                                     <ul>
                                         <Link className="home" to="/login" exact ><li>Login/Register</li></Link>
                                         <Link className="home" onClick={this.handleLogout} to="/login" exact ><li>Logout</li></Link>
