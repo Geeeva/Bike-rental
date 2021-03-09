@@ -1,4 +1,3 @@
-import {Container, Navbar, Nav, Dropdown} from 'react-bootstrap';
 import About1 from '../../assets/images/about/about-1.jpg';
 import About2 from '../../assets/images/about/about-2.jpg';
 import Ivana from "../../assets/images/about/ivana.jpg";
@@ -73,8 +72,8 @@ const About = () => {
                             <h5 className="title">Ivana Gilic</h5>
                             <div className="prof">Sales Manager</div>
                             <ul className="social-list">
-                                <li><a target="_blank" href="https://www.facebook.com/ivana.gilic.5"><i className="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a target="_blank" href="https://www.instagram.com/geeevaaa/"><i className="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                <li><a target="_blank" rel="noreferrer" href="https://www.facebook.com/ivana.gilic.5"><i className="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a target="_blank" rel="noreferrer" href="https://www.instagram.com/geeevaaa/"><i className="fa fa-instagram" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
                         <div className="col-sm-6 col-md-6 team-item">
@@ -82,8 +81,8 @@ const About = () => {
                             <h5 className="title">Jelena Radovanovic</h5>
                             <div className="prof">Sales Manager</div>
                             <ul className="social-list">
-                                <li><a target="_blank" href="https://www.facebook.com/"><i className="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a target="_blank" href="https://www.instagram.com/"><i className="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                <li><a target="_blank" rel="noreferrer" href="https://www.facebook.com/"><i className="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a target="_blank" rel="noreferrer" href="https://www.instagram.com/"><i className="fa fa-instagram" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
                     </div>

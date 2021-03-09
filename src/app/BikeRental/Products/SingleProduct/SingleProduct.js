@@ -16,7 +16,7 @@ class SingleProduct extends Component {
         const products = this.props.products;
         const {basketDaysQuantity, enterQuantity, increaseDaysToRent, decreaseDaysToRent, addProductToBasket} = this.props;
 
-        console.log(basketDaysQuantity)
+        //console.log(basketDaysQuantity)
         const product = products.products.filter(
             product => parseInt(product._id) === parseInt(productId)
         )

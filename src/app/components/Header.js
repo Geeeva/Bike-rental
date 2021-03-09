@@ -13,7 +13,7 @@ class Header extends Component {
         isHovered: false
     }
     handleNavbarMobToggle = () => {
-        console.log(this.state.isOpenedNavbar);
+        //console.log(this.state.isOpenedNavbar);
         this.setState({ isOpenedNavbar: !this.state.isOpenedNavbar });
 
         if(this.state.isOpenedNavbar === true){
@@ -43,7 +43,7 @@ class Header extends Component {
 
     render(){
         const {loggedIn, user, totalBasketCount} = this.props;
-        console.log(totalBasketCount)
+        //console.log(totalBasketCount)
         return (
             <header className="header">
                 <div className={"nav-btn" + (this.state.isOpenedNavbar? " active" : "")} onClick ={this.handleNavbarMobToggle}>

@@ -39,8 +39,8 @@ class ScrollToTop extends Component {
         return (
             <div className="scroll-to-top">
                 {is_visible && (
-                    <div class="to-top active" onClick={() => this.scrollToTop()}>
-                        <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                    <div className="to-top active" onClick={() => this.scrollToTop()}>
+                        <i className="fa fa-angle-double-up" aria-hidden="true"></i>
                     </div>
             )}
         </div>

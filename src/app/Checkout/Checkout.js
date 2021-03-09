@@ -76,7 +76,7 @@ class Checkout extends Component {
             <Container className="checkout">
                 <Row>
                     <section className="col-md-6 checkout-form">
-                        <div class="col-md-12 checkout-form-caption"><h5>Data</h5></div>
+                        <div className="col-md-12 checkout-form-caption"><h5>Data</h5></div>
                         <form id="checkoutForm"  name="checkoutForm"  >
                             <ul className="form-cover">
                                 <li className="col-md-6">
@@ -86,7 +86,7 @@ class Checkout extends Component {
                                         name="first-name"
                                         placeholder="First name *"
                                         value={this.state.firstName}
-                                        onChange={(e) =>{this.setState({ firstName: e.target.value }); console.log("Ivana");}}
+                                        onChange={e =>this.setState({ firstName: e.target.value })}
                                     />
                                 </li>
                                 <li className="col-md-6">
@@ -210,9 +210,9 @@ class Checkout extends Component {
                                 ))}
                             </Row>
                             <Row className="table-bottom">
-                                <div class="col-md-12">
+                                <div className="col-md-12">
                                     <Row className="total-table">
-                                    <div class="col-md-12">
+                                    <div className="col-md-12">
                                     </div>
                                     <div className="col-md-9">
                                         Rent amount VAT included
@@ -226,7 +226,7 @@ class Checkout extends Component {
                                         <div className="col-md-3">
                                         {totalPrice} €
                                     </div>
-                                    <div class="col-md-12">
+                                    <div className="col-md-12">
                                         <button
                                             id="#submit"
                                             type="submit"

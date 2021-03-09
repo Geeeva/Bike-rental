@@ -53,7 +53,7 @@ class Basket extends Component {
                                  </Row>
                                 ))}
                                 <Row className="table-bottom">
-                                    <div class="col-md-6">
+                                    <div className="col-md-6">
                                         <h5>pickup:</h5>
                                         <p className="overtaking">on location of sales office - Delta City</p>
                                     </div>

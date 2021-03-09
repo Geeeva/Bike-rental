@@ -115,8 +115,8 @@ class Admin extends Component {
     console.log(this.state.ime);
   };
   render() {
-    const userList = users.map((user) => {
-      return <option value={user.id}>{user.name}</option>;
+    const userList = users.map((user, index) => {
+      return <option key={index} value={user.id}>{user.name}</option>;
     });
     return (
       <div style={{ paddingTop: 140}}>

@@ -71,29 +71,29 @@ export default class Home extends Component {
           <span className="effwct-bg-feedback"></span>
           <span className="mask"></span>
           <div className="container">
-            <h2 class="title">feedback</h2>
+            <h2 className="title">feedback</h2>
             <div className="main-slider" style={{ height: 500 }}>
               <FeedbackSlider></FeedbackSlider>
             </div>
           </div>
         </section>
-        <section class="s-clients client">
-          <div class="container">
-            <div class="clients-cover">
+        <section className="s-clients client">
+          <div className="container">
+            <div className="clients-cover">
 
             </div>
           </div>
         </section>
 
-        <section class="s-subscribe subs-cont">
-          <span class="mask"></span>
+        <section className="s-subscribe subs-cont">
+          <span className="mask"></span>
           <span
-            class="subscribe-effect wow fadeIn subs-cont2 "
+            className="subscribe-effect wow fadeIn subs-cont2 "
             data-wow-duration="1s"
           ></span>
-          <div class="container">
-            <div class="subscribe-left">
-              <h2 class="title">
+          <div className="container">
+            <div className="subscribe-left">
+              <h2 className="title">
                 <span>Subscribe</span>
               </h2>
               <p>
@@ -116,7 +116,7 @@ export default class Home extends Component {
               </div>
             </div>
             <img
-              class="wow fadeInRightBlur rx-lazy"
+              className="wow fadeInRightBlur rx-lazy"
               data-wow-duration=".8s"
               data-wow-delay=".3s"
               src={subs3}
@@ -124,34 +124,34 @@ export default class Home extends Component {
             />
           </div>
         </section>
-        <section class="s-products">
-          <div class="container">
+        <section className="s-products">
+          <div className="container">
             {/*izlistati cetri proizvoda*/}
             <div className="col-12 col-lg-9 shop-cover" style={{ margin: 'auto'}}>
                 <Products />
             </div>
           </div>
         </section>
-        <section class="s-instagram">
-          <div class="instagram-cover">
-            <a href="#" class="instagram-item">
-              <img class="rx-lazy" src={instagram1} alt="img" />
+        <section className="s-instagram">
+          <div className="instagram-cover">
+            <a href="#" className="instagram-item">
+              <img className="rx-lazy" src={instagram1} alt="img" />
             </a>
 
-            <a href="#" class="instagram-item">
-              <img class="rx-lazy" src={instagram2} alt="img" />
+            <a href="#" className="instagram-item">
+              <img className="rx-lazy" src={instagram2} alt="img" />
             </a>
 
-            <a href="#" class="instagram-item">
-              <img class="rx-lazy" src={instagram5} alt="img" />
+            <a href="#" className="instagram-item">
+              <img className="rx-lazy" src={instagram5} alt="img" />
             </a>
 
-            <a href="#" class="instagram-item">
-              <img class="rx-lazy" src={instagram3} alt="img" />
+            <a href="#" className="instagram-item">
+              <img className="rx-lazy" src={instagram3} alt="img" />
             </a>
 
-            <a href="#" class="instagram-item">
-              <img class="rx-lazy" src={instagram4} alt="img" />
+            <a href="#" className="instagram-item">
+              <img className="rx-lazy" src={instagram4} alt="img" />
             </a>
           </div>
         </section>

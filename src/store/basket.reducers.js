@@ -7,7 +7,7 @@ const initialState = {
 };
 
 const basketReducer = (state = initialState, action) => {
-    console.log("sa vrha redcure" + state.basketDaysQuantity)
+    //console.log("sa vrha redcure" + state.basketDaysQuantity)
     switch(action.type) {
         case ADD_PRODUCT_TO_BASKET:
             const newIds = state.basketIds.concat({id: action.payload, days_to_rent: state.basketDaysQuantity});
@@ -24,7 +24,7 @@ const basketReducer = (state = initialState, action) => {
                     item.days_to_rent = state.basketDaysQuantity;
                 }}
             )
-            console.log("iz reducera" + newIds[0].days_to_rent)
+            //console.log("iz reducera" + newIds[0].days_to_rent)
             return {
                 ...state,
                 basketIds: uniqueIds,
@@ -68,7 +68,7 @@ const basketReducer = (state = initialState, action) => {
             } else {
                 counter = action.payload
             }
-            console.log("iz reducera counter" + counter)
+            //console.log("iz reducera counter" + counter)
             return {
                 ...state,
                 basketDaysQuantity: counter

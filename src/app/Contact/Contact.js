@@ -30,7 +30,7 @@ class Contact extends Component {
 
   onComment = (e) => {
     e.preventDefault();
-    console.log("komentar");
+    //console.log("komentar");
   };
 
   CMap = withScriptjs(
