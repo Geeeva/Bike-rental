@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Bike-rental/static/css/main.db5d183e.chunk.css",
-    "main.js": "/Bike-rental/static/js/main.6561115b.chunk.js",
-    "main.js.map": "/Bike-rental/static/js/main.6561115b.chunk.js.map",
+    "main.css": "/Bike-rental/static/css/main.be90418a.chunk.css",
+    "main.js": "/Bike-rental/static/js/main.f76f2af2.chunk.js",
+    "main.js.map": "/Bike-rental/static/js/main.f76f2af2.chunk.js.map",
     "runtime-main.js": "/Bike-rental/static/js/runtime-main.3743cc39.js",
     "runtime-main.js.map": "/Bike-rental/static/js/runtime-main.3743cc39.js.map",
     "static/css/2.9f027f2c.chunk.css": "/Bike-rental/static/css/2.9f027f2c.chunk.css",
-    "static/js/2.10c03134.chunk.js": "/Bike-rental/static/js/2.10c03134.chunk.js",
-    "static/js/2.10c03134.chunk.js.map": "/Bike-rental/static/js/2.10c03134.chunk.js.map",
+    "static/js/2.5ae6d561.chunk.js": "/Bike-rental/static/js/2.5ae6d561.chunk.js",
+    "static/js/2.5ae6d561.chunk.js.map": "/Bike-rental/static/js/2.5ae6d561.chunk.js.map",
     "index.html": "/Bike-rental/index.html",
     "static/css/2.9f027f2c.chunk.css.map": "/Bike-rental/static/css/2.9f027f2c.chunk.css.map",
-    "static/css/main.db5d183e.chunk.css.map": "/Bike-rental/static/css/main.db5d183e.chunk.css.map",
-    "static/js/2.10c03134.chunk.js.LICENSE.txt": "/Bike-rental/static/js/2.10c03134.chunk.js.LICENSE.txt",
+    "static/css/main.be90418a.chunk.css.map": "/Bike-rental/static/css/main.be90418a.chunk.css.map",
+    "static/js/2.5ae6d561.chunk.js.LICENSE.txt": "/Bike-rental/static/js/2.5ae6d561.chunk.js.LICENSE.txt",
     "static/media/about-1.bdaa6494.jpg": "/Bike-rental/static/media/about-1.bdaa6494.jpg",
     "static/media/about-2.e3e3d4eb.jpg": "/Bike-rental/static/media/about-2.e3e3d4eb.jpg",
     "static/media/back2.c385bfa3.jpg": "/Bike-rental/static/media/back2.c385bfa3.jpg",
@@ -44,8 +44,8 @@
   "entrypoints": [
     "static/js/runtime-main.3743cc39.js",
     "static/css/2.9f027f2c.chunk.css",
-    "static/js/2.10c03134.chunk.js",
-    "static/css/main.db5d183e.chunk.css",
-    "static/js/main.6561115b.chunk.js"
+    "static/js/2.5ae6d561.chunk.js",
+    "static/css/main.be90418a.chunk.css",
+    "static/js/main.f76f2af2.chunk.js"
   ]
 }
