@@ -5630,3 +5630,26 @@ body.modal {
 		max-width: 100%;
 	}
 }
+.radio-buttons {
+	margin-top: 30px;
+	border-top: 1px solid #ebedec;
+	padding-top: 20px;
+	input{
+		margin-right: 5px;
+	}
+	label:nth-child(5){
+		color: #A2A7BF;
+	}
+	label{
+		margin-right: 15px;
+	}
+}
+
+.button-wrapper{
+	margin-top: 30px;
+	text-align: right;
+}
+textarea{
+	height: unset;
+}
+

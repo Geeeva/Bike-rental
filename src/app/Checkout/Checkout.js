@@ -15,7 +15,8 @@ class Checkout extends Component {
         email: "",
         date: "",
         note:"",
-        notificationErr: ""
+        notificationErr: "",
+        selectedRadio: "cash"
     }
 
     validate = e => {
@@ -48,6 +49,11 @@ class Checkout extends Component {
         return isError;
     }
 
+    handleRadioChange = (event) => {
+        this.setState({
+            selectedRadio: event.currentTarget.value
+        })
+    };
 
     submitHandler = (e) => {
         e.preventDefault();
@@ -66,12 +72,22 @@ class Checkout extends Component {
                 email: "",
                 date: "",
                 note:"",
-                notificationErr: ""
+                notificationErr: "",
+                selectedRadio: "cash"
             })
+
+            const order = {
+                ...this.state,
+                orderItems: this.props.products
+            }
+
+            console.log(order);
+
         }
     }
     render() {
         const{totalPrice, products} = this.props;
+        console.log(products);
         return (
             <Container className="checkout">
                 <Row>
@@ -164,6 +180,7 @@ class Checkout extends Component {
                                         id="note"
                                         name="note"
                                         placeholder="Note"
+                                        rows="4"
                                         value={this.state.note}
                                         onChange={e =>this.setState({ note: e.target.value })}
                                     >
@@ -178,7 +195,7 @@ class Checkout extends Component {
                         </form>
                             <div className="btn-form-cover">
 
-        </div>
+                            </div>
                     </section>
                     <section className="col-md-6">
                         <Row>
@@ -226,7 +243,31 @@ class Checkout extends Component {
                                         <div className="col-md-3">
                                         {totalPrice} €
                                     </div>
-                                    <div className="col-md-12">
+                            </Row>
+                            <Row>
+                                    <div className="radio-buttons col-md-12">
+                                        <div>Type of payment:</div>
+                                    <input
+                                        id="cash"
+                                        value="cash"
+                                        name="cash"
+                                        type="radio"
+                                        checked={this.state.selectedRadio === "cash"}
+                                        onChange={this.handleRadioChange}
+                                    />
+                                    <label htmlFor="pickup">cash on pick up</label>
+                                    <input
+                                        id="byCard"
+                                        value="card"
+                                        name="card"
+                                        type="radio"
+                                        disabled
+                                        checked={this.state.selectedRadio === "card"}
+                                        onChange={this.handleRadioChange}
+                                    />
+                                    <label htmlFor="card">by Card</label>
+                                    </div>
+                                    <div className="col-md-12 button-wrapper">
                                         <button
                                             id="#submit"
                                             type="submit"
