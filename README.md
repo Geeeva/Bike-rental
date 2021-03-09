@@ -33,4 +33,4 @@ the possibility to pay with cards or just to choose pick up option. By hitting "
 - **npm install**
 - **npm start**
 
-**[Demo to project](https://geeeva.github.io/bike-rental/)**
+**[Demo to project](https://geeeva.github.io/Bike-rental/)**
